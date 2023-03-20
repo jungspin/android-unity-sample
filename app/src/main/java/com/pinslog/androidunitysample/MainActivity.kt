@@ -15,8 +15,13 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.unity_btn)
 
         button.setOnClickListener {
-            val intent = Intent(this, CustomUnityActivity::class.java)
+            val intent = Intent(this, BridgeActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("CustomUnityActivityTest", "MainActivity: ${android.os.Process.myPid()}")
     }
 }

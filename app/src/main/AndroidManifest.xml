@@ -12,8 +12,12 @@
         android:theme="@style/Theme.AndroidUnitySample"
         tools:targetApi="31">
         <activity
-            android:name=".CustomUnityActivity"
+            android:name=".BridgeActivity"
             android:exported="false" />
+        <activity
+            android:name=".CustomUnityActivity"
+            android:exported="false"
+            android:process=":unity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
